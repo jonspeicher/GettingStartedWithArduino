@@ -5,23 +5,17 @@
 // Licensed under CC BY-NC-SA 3.0: http://creativecommons.org/licenses/by-nc-sa/3.0
 // -------------------------------------------------------------------------------------------------
 
-int ledPin = 13;
+int ledPin = 13;                // Define a variable for the LED pin
 
-// -------------------------------------------------------------------------------------------------
-// setup: Run once, when the sketch is started
-
-void setup()
+void setup()                    // Run once when the sketch starts
 {
-  pinMode(ledPin, OUTPUT);      // Sets the digital pin as an output
+  pinMode(ledPin, OUTPUT);      // Make the LED pin an output
 }
 
-// -------------------------------------------------------------------------------------------------
-// loop: Run over and over again.
-
-void loop()
+void loop()                     // Run over and over again
 {
-  digitalWrite(ledPin, HIGH);   // Turns the LED on
-  delay(1000);                  // Waits for one second (1000 milliseconds)
-  digitalWrite(ledPin, LOW);    // Turns the LED off
-  delay(1000);                  // Waits for one second
+  digitalWrite(ledPin, HIGH);   // Turn the LED on
+  delay(1000);                  // Wait one second (1000 milliseconds)
+  digitalWrite(ledPin, LOW);    // Turn the LED off
+  delay(1000);                  // Wait one second
 }
