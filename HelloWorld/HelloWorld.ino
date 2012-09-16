@@ -1,8 +1,7 @@
 // -------------------------------------------------------------------------------------------------
-// HelloArduino - The basic Arduino example
-// A project of HackPittsburgh (http://www.hackpittsburgh.org)
-//
-// By Jonathan Speicher (jonathan@hackpittsburgh.org)
+// HelloWorld - Blink the on-board LED
+// A project of Indiana University of Pennsylvania by Jon Speicher (jon.speicher@gmail.com)
+// Derived from Intro to Programming the Arduino by HackPittsburgh (see README.markdown)
 // Licensed under CC BY-NC-SA 3.0: http://creativecommons.org/licenses/by-nc-sa/3.0
 // -------------------------------------------------------------------------------------------------
 
