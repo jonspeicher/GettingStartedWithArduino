@@ -1,36 +1,23 @@
 // -------------------------------------------------------------------------------------------------
-// DontFadeAway - Adds red LED PWM output setting to LiveUpToYourPotential
-// A project of HackPittsburgh (http://www.hackpittsburgh.org)
-//
-// By Jonathan Speicher (jonathan@hackpittsburgh.org)
+// DimOneLedWithPot - Dim one external LED attached to pin 11 using a pot attached to analog 0
+// A project of Indiana University of Pennsylvania by Jon Speicher (jon.speicher@gmail.com)
+// Derived from Intro to Programming the Arduino by HackPittsburgh (see README.markdown)
 // Licensed under CC BY-NC-SA 3.0: http://creativecommons.org/licenses/by-nc-sa/3.0
 // -------------------------------------------------------------------------------------------------
 
-int ledPin = 9;
-int ledVal = 0;
+int ledPin = 11;                    // Define a variable for the LED pin
+int potPin = 0;                     // Define a variable for the pot pin
 
-int potPin = 0;
-int potVal = 0;
+int potValue;                       // Define a variable for the pot value
+int brightness;                     // Define a variable for the brightness
 
-// -------------------------------------------------------------------------------------------------
-// setup: Run once, when the sketch is started
-
-void setup()
+void setup()                        // Run once when the sketch starts
 {
-  Serial.begin(9600);            // Opens the serial port
 }
 
-// -------------------------------------------------------------------------------------------------
-// loop: Run over and over again
-
-void loop()
+void loop()                         // Run over and over again
 {
-  potVal = analogRead(potPin);   // Read the pot input value
-  Serial.print("Pot value = ");  // Display a helpful message
-  Serial.println(potVal);
-
-  ledVal = potVal / 4;           // Map from analog range (0-1023) to digital range (0-255)
-  analogWrite(ledPin, ledVal);   // Sets the LED brightness
-  Serial.print("Led value = ");  // Display a helpful message
-  Serial.println(ledVal);
+  potValue = analogRead(potPin);    // Read the pot value
+  brightness = potValue / 4;        // Compute the brightness
+  analogWrite(ledPin, brightness);  // Set the LED brightness
 }
