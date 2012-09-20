@@ -1,5 +1,5 @@
 // -------------------------------------------------------------------------------------------------
-// Dimming - Dim one external LED attached to pin 11
+// DimOneLed - Dim one external LED attached to pin 11
 // A project of Indiana University of Pennsylvania by Jon Speicher (jon.speicher@gmail.com)
 // Derived from Intro to Programming the Arduino by HackPittsburgh (see README.markdown)
 // Licensed under CC BY-NC-SA 3.0: http://creativecommons.org/licenses/by-nc-sa/3.0
