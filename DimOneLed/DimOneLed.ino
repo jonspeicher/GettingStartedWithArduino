@@ -6,7 +6,7 @@
 // -------------------------------------------------------------------------------------------------
 
 int ledPin = 11;                    // Define a variable for the LED pin
-int brightness = 64;                // Define a variable for the brightness
+int brightness;                     // Define a variable for the brightness
 
 void setup()                        // Run once when the sketch starts
 {
@@ -14,5 +14,6 @@ void setup()                        // Run once when the sketch starts
 
 void loop()                         // Run over and over again
 {
+  brightness = 64;                  // Update the brightness variable
   analogWrite(ledPin, brightness);  // Set the LED brightness
 }

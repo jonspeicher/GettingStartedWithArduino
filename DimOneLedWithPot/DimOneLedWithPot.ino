@@ -18,6 +18,6 @@ void setup()                        // Run once when the sketch starts
 void loop()                         // Run over and over again
 {
   potValue = analogRead(potPin);    // Read the pot value
-  brightness = potValue / 4;        // Compute the brightness
+  brightness = potValue / 4;        // Update the brightness variable
   analogWrite(ledPin, brightness);  // Set the LED brightness
 }
