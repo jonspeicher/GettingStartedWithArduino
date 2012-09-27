@@ -1,49 +1,39 @@
 // -------------------------------------------------------------------------------------------------
-// FinishingTouches - Adds green and blue LED PWM output setting to DontFadeAway
-// A project of HackPittsburgh (http://www.hackpittsburgh.org)
+// DimThreeLedsWithPots - Dim three external LEDs attached to pins 9, 10, and 11 using three pots
+//                        attached to analog 0, 1, and 2
 //
-// By Jonathan Speicher (jonathan@hackpittsburgh.org)
+// A project of Indiana University of Pennsylvania by Jon Speicher (jon.speicher@gmail.com)
+// Derived from Intro to Programming the Arduino by HackPittsburgh (see README.markdown)
 // Licensed under CC BY-NC-SA 3.0: http://creativecommons.org/licenses/by-nc-sa/3.0
 // -------------------------------------------------------------------------------------------------
 
-int redLedPin = 9;
-int greenLedPin = 10;
-int blueLedPin = 11;
+int redLedPin = 11;                      // Define a variable for the red LED pin
+int redPotPin = 0;                       // Define a variable for the red pot pin
 
-int redLedVal = 0;
-int greenLedVal = 0;
-int blueLedVal = 0;
+int greenLedPin = 10;                    // Define a variable for the greeb LED pin
+int greenPotPin = 1;                     // Define a variable for the green pot pin
 
-int redPotPin = 0;
-int greenPotPin = 1;
-int bluePotPin = 2;
+int blueLedPin = 9;                      // Define a variable for the blue pot pin
+int bluePotPin = 2;                      // Define a variable for the blue pot pin
 
-int redPotVal = 0;
-int greenPotVal = 0;
-int bluePotVal = 0;
+int potValue;                            // Define a variable for the pot value
+int brightness;                          // Define a variable for the brightness
 
-// -------------------------------------------------------------------------------------------------
-// setup: Run once, when the sketch is started
-
-void setup()
+void setup()                             // Run once when the sketch starts
 {
-  Serial.begin(9600);            // Opens the serial port
 }
 
-// -------------------------------------------------------------------------------------------------
-// loop: Run over and over again
-
-void loop()
+void loop()                              // Run over and over again
 {
-  redPotVal = analogRead(redPotPin);      // Read the pot input value
-  redLedVal = redPotVal / 4;              // Map from analog range (0-1023) to digital range (0-255)
-  analogWrite(redLedPin, redLedVal);      // Sets the LED brightness
+  potValue = analogRead(redPotPin);      // Read the red pot value
+  brightness = potValue / 4;             // Update the brightness variable
+  analogWrite(redLedPin, brightness);    // Set the red LED brightness
 
-  greenPotVal = analogRead(greenPotPin);  // Read the pot input value
-  greenLedVal = greenPotVal / 4;          // Map from analog range (0-1023) to digital range (0-255)
-  analogWrite(greenLedPin, greenLedVal);  // Sets the LED brightness
+  potValue = analogRead(greenPotPin);    // Read the green pot value
+  brightness = potValue / 4;             // Update the brightness variable
+  analogWrite(greenLedPin, brightness);  // Set the green LED brightness
 
-  bluePotVal = analogRead(bluePotPin);    // Read the pot input value
-  blueLedVal = bluePotVal / 4;            // Map from analog range (0-1023) to digital range (0-255)
-  analogWrite(blueLedPin, blueLedVal);    // Sets the LED brightness
+  potValue = analogRead(bluePotPin);     // Read the blue pot value
+  brightness = potValue / 4;             // Update the brightness variable
+  analogWrite(blueLedPin, brightness);   // Set the blue LED brightness
 }
