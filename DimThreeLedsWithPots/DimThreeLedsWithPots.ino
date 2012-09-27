@@ -10,7 +10,7 @@
 int redLedPin = 11;                      // Define a variable for the red LED pin
 int redPotPin = 0;                       // Define a variable for the red pot pin
 
-int greenLedPin = 10;                    // Define a variable for the greeb LED pin
+int greenLedPin = 10;                    // Define a variable for the green LED pin
 int greenPotPin = 1;                     // Define a variable for the green pot pin
 
 int blueLedPin = 9;                      // Define a variable for the blue pot pin
