@@ -14,6 +14,6 @@ void setup()                        // Run once when the sketch starts
 
 void loop()                         // Run over and over again
 {
-  brightness = 64;                  // Update the brightness variable
+  brightness = 16;                  // Update the brightness variable
   analogWrite(ledPin, brightness);  // Set the LED brightness
 }
