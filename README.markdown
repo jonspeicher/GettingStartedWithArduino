@@ -1,36 +1,29 @@
-PhysicalPixels
-==============
+GettingStartedWithArduino
+=========================
 
-PhysicalPixels is a collection of basic Arduino sketches used in HackPittsburgh's *Intro to
-Programming the Arduino* workshop.
+GettingStartedWithArduino is a collection of basic Arduino sketches used in the Indiana University
+of Pennsylvania's *Getting Started With Arduino* workshop.
 
 Description
 ===========
 
-[HackPittsburgh](http://www.hackpittsburgh.org) has held several workshops dedicated to teaching
-attendees the ins and outs of the [Arduino](http://www.arduino.cc) microcontroller platform.
+[Indiana University of Pennsylvania](http://www.iup.edu) has developed a one-day, hands-on workshop
+dedicated to teaching attendees the ins and outs of the [Arduino](http://www.arduino.cc)
+microcontroller platform.
 
-One workshop, *Intro to Programming the Arduino*, walks through the process of building up an
-Arduino sketch from scratch. At the end, this sketch reads values from three potentiometers and
-uses them to control the red, green, and blue intensities of a light-emitting diode using
-pulse-width modulation. The sketches in this package represent the progression of concepts as
-introduced in the workshop.
-
-Photos of previous workshops are available at [my Flickr page](http://www.flickr.com/photos/jonspeicher/sets/72157623006531313) or the
-[HackPittsburgh Flickr Pool](http://www.flickr.com/groups/hackpgh).
+This workshop, *Getting Started With Arduino*, walks through the process of building up an Arduino
+sketch from scratch. At the end, this sketch reads values from three potentiometers and uses them to
+control the red, green, and blue intensities of a light-emitting diode using pulse-width modulation.
+The sketches in this package represent the progression of concepts as introduced in the workshop.
 
 Minimum Requirements
 ====================
 
-* An Arduino (http://arduino.cc)
-* Arduino 0017 (http://arduino.cc)
+* An Arduino board (http://arduino.cc)
+* The Arduino software (http://arduino.cc)
 
-I've tested these sketches Arduino 0017 on Mac OS X 10.6.4, Windows XP, Windows Vista, and **nothing
+I've tested these sketches using an Arduino Uno and Arduino 1.0.1 on Mac OS X 10.8.2 and **nothing
 else**.
-
-**Note:** In specific, I have **not** tested these sketches with the latest Arduino 1.0! They do
-build, however, and I've reviewed the porting guidelines to ensure that any issues have been
-addressed.
 
 Installation
 ============
@@ -40,7 +33,7 @@ environment.
 
 No installation is specifically required to build and run these sketches short of placing this
 entire repository, directory structure and all, in a subdirectory of the Arduino sketchbook named
-`PhysicalPixels`.
+`GettingStartedWithArduino`.
 
 There should be plenty of online documentation describing this process.
 
@@ -58,19 +51,22 @@ The usage of each individual sketch depends on the functionality it exposes. See
 Sketch Progression
 ==================
 
-These sketches fit the progression of HackPittsburgh's *Intro to Programming the Arduino* workshop. The specific details regarding the circuit used in each step
-as well as the code progression are contained within the workshop slides.
+These sketches fit the progression of IUP's *Getting Started With Arduino* workshop. The specific
+details regarding the circuit used in each step as well as the code progression are contained within
+the supporting workshop materials, notably the workshop outline and slides.
 
-To obtain the workshop slides, they may be downloaded from [my Dropbox archive](http://dl.dropbox.com/u/1031159/hackpgh-intro-to-programming-arduino.zip).
+The workshop materials may be downloaded from my Dropbox archive:
+
+https://dl.dropbox.com/u/1031159/GettingStartedWithArduino.zip
 
 A brief description of the sketch progression is provided below.
 
-1. `HelloArduino` - The basic Arduino example, blinks the built-in LED on pin 13
-2. `DownToTheWire` - Changes `HelloArduino` to blink an external LED instead of the built-in LED
-3. `BreakfastSerial` - Adds serial debug output to `DownToTheWire`
-4. `LiveUpToYourPotential` - Adds potentiometer input reading output to `BreakfastSerial`
-5. `DontFadeAway` - Adds red LED PWM output setting to `LiveUpToYourPotential`
-6. `FinishingTouches` - Adds green and blue LED output setting to `DontFadeAway`
+1. `BlinkOnboardLed` - The basic Arduino example, blinks the built-in LED on digital pin 13
+2. `BlinkOneLed` - Changes `HelloArduino` to blink an external LED on digital pin 11
+3. `DimOneLed` - Changes `BlinkOneLed` to dim the external led on digital pin 11 with PWM
+4. `DimOneLedWithPots` - Changes `DimOneLed` to set the LED brightness from a pot on analog pin 0
+5. `DimThreeLedsWithPots` - Changes `DimOneLedWithPots` to support LEDs on digital pins 10 and 9
+   using pots on analog pins 1 and 2
 
 Tests
 =====
@@ -80,22 +76,48 @@ No unit tests are provided with the source distribution at this time.
 Uninstallation
 ==============
 
-To uninstall PhysicalPixels, simply remove the `PhysicalPixels` directory, subdirectories, and files
-from the Arduino sketchbook.
+To uninstall GettingStartedWithArduino, simply remove the `GettingStartedWithArduino` directory,
+subdirectories, and files from the Arduino sketchbook.
 
 Improvements
 ============
 
 There are a few things I'd like to do:
 
-* Build and test this with Arduino 1.0
+* It might be nice to add an "advanced" version of the final sketch that places repeated code into
+  subroutines to serve as an example of how this might be done
 
-Contributors
-============
+* Similarly using const definitions in the "advanced" version of the final sketch might help
 
+* I've thought about making the third sketch, `DimOneLed`, actually oscillate the LED between low
+  and high brightness to better illustrate the dramatic difference; this would place it closer to
+  the `BlinkOneLed` sketch in terms of code but would make for a tougher transition to the
+  `DimOneLedWithPots` sketch later on
+
+* It would also be nice to find a place to host the slides and outline that isn't my Dropbox
+
+Author
+======
+
+Jon Speicher ([jon.speicher@gmail.com](mailto:jon.speicher@gmail.com))
+
+Contributors and Attribution
+============================
+
+This work is derived in part from the the *Intro to Programming The Arduino* Code, which is a
+project of [HackPittsburgh](http://www.hackpittsburgh.org) by Jon Speicher
+([jon.speicher@gmail.com](mailto:jon.speicher@gmail.com)), located at
+https://github.com/jonspeicher/PhysicalPixels.
+
+The IUP workshop, as well as the original HackPittsburgh workshop, were created and refined thanks
+to the hard work and input of a number of talented people:
+
+* Rich Bates
+* Sean Derry
 * Dave Findlay
+* Lori Hepner
 * Marty McGuire
-* Jon Speicher ([jonathan@hackpittsburgh.org](mailto:jonathan@hackpittsburgh.org))
+* Susan Speicher
 * Matt Stultz
 
 History
@@ -111,7 +133,19 @@ History
 
 * Arduino 1.0 compatibility
 
+1.0
+---
+
+* New sketch progression
+  * Removal of serial output sketches as that will be a separate topic in the workshop
+  * Put dimming of the LED with a hard-coded value before introduction of the potentiometer
+
+* Reduced sketch complexity and duplicate code
+  * Shared variable for pot read value and for LED brightness
+
+* Update attribution and credits for IUP workshop
+
 License
 =======
 
-This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-nc-sa/3.0).
+See the file `LICENSE` included with this repository.
