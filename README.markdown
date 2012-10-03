@@ -139,10 +139,8 @@ History
 * New sketch progression
   * Removal of serial output sketches as that will be a separate topic in the workshop
   * Put dimming of the LED with a hard-coded value before introduction of the potentiometer
-
 * Reduced sketch complexity and duplicate code
   * Shared variable for pot read value and for LED brightness
-
 * Update attribution and credits for IUP workshop
 
 License
