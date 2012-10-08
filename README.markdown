@@ -104,15 +104,15 @@ Jon Speicher ([jon.speicher@gmail.com](mailto:jon.speicher@gmail.com))
 Contributors and Attribution
 ============================
 
-This work is derived in part from the the *Intro to Programming The Arduino* Code, which is a
-project of [HackPittsburgh](http://www.hackpittsburgh.org) by Jon Speicher
+This work is derived in part from the *Intro to Programming The Arduino* Code, which is a project of
+[HackPittsburgh](http://www.hackpittsburgh.org) by Jon Speicher
 ([jon.speicher@gmail.com](mailto:jon.speicher@gmail.com)), located at
 https://github.com/jonspeicher/PhysicalPixels.
 
 The IUP workshop, as well as the original HackPittsburgh workshop, were created and refined thanks
 to the hard work and input of a number of talented people:
 
-* Rich Bates
+* Bevin Baker
 * Sean Derry
 * Dave Findlay
 * Lori Hepner
