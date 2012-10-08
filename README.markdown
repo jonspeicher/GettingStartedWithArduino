@@ -113,6 +113,7 @@ The IUP workshop, as well as the original HackPittsburgh workshop, were created 
 to the hard work and input of a number of talented people:
 
 * Bevin Baker
+* Rich Bates
 * Sean Derry
 * Dave Findlay
 * Lori Hepner
