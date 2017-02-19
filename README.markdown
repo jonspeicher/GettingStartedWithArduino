@@ -55,9 +55,7 @@ These sketches fit the progression of IUP's *Getting Started With Arduino* works
 details regarding the circuit used in each step as well as the code progression are contained within
 the supporting workshop materials, notably the workshop outline and slides.
 
-The workshop materials may be downloaded from my Dropbox archive:
-
-https://dl.dropbox.com/u/1031159/GettingStartedWithArduino.zip
+The workshop materials may be downloaded from my [Dropbox archive](https://www.dropbox.com/s/9cehrvjew7wksh5/GettingStartedWithArduino.zip?dl=1).
 
 A brief description of the sketch progression is provided below.
 
